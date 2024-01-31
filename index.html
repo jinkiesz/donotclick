@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="valentines.css">
+    <script>
+        function handleButtonClick() {
+            var btn = document.getElementById('myButton');
+            var msg = document.getElementById('message');
+            var dishesMsg = document.getElementById('dishesMessage');
+            btn.style.display = 'none'; // Hide the button
+            msg.style.display = 'block'; // Show the 'You stink!' message
+
+            // Delay before starting to display 'go do the dishes' letter by letter
+            setTimeout(function() {
+                var text = 'can you pretty pretty please get me two small bottles of white wine once you get off from work?';
+                var i = 0;
+                var interval = setInterval(function() {
+                    if (i < text.length) {
+                        dishesMsg.innerHTML += text[i];
+                        i++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 100); // Speed of letters appearing
+            }, 1500); // Delay in milliseconds before letters start appearing
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <button id="myButton" class="myButton" onclick="handleButtonClick()">Click Me</button>
+        <p id="message" style="display: none;">You stink!</p>
+        <p id="dishesMessage" style="display: block;"></p>
+    </div>
+</body>
+</html>
+
+</body>
+</html>

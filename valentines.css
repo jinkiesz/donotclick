@@ -1,0 +1,16 @@
+/* Style for the button */
+.myButton {
+    padding: 20px 30px; /* Add some padding */
+    background-color: pink; /* Pink background */
+    font-size: 20px;
+    /* ... other styles ... */
+    /* Ensure other styles like padding, border, etc., are included here as before */
+}
+
+/* Centering the button */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Full viewport height */
+}
